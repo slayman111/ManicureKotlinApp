@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authorizationFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.example.manicureapp.fragments.AuthorizationFragment"
+        android:label="AuthorizationFragment"
+        tools:layout="@layout/authorization_fragment">
+        <action
+            android:id="@+id/action_authorizationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_mastersFragment"
+            app:destination="@id/mastersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.manicureapp.fragments.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/registration_fragment" />
+
+    <fragment
+        android:id="@+id/mastersFragment"
+        android:name="com.example.manicureapp.fragments.MastersFragment"
+        android:label="MastersFragment"
+        tools:layout="@layout/masters_fragment">
+        <action
+            android:id="@+id/action_mastersFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_mastersFragment_to_profileFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_mastersFragment_to_priceListFragment"
+            app:destination="@id/priceListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.manicureapp.fragments.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/sign_up_fragment" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.manicureapp.fragments.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/account_fragment" />
+
+    <fragment
+        android:id="@+id/priceListFragment"
+        android:name="com.example.manicureapp.fragments.PriceListFragment"
+        android:label="PriceListFragment"
+        tools:layout="@layout/price_list_fragment">
+        <action
+            android:id="@+id/action_priceListFragment_to_serviceInfoFragment"
+            app:destination="@id/serviceInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/serviceInfoFragment"
+        android:name="com.example.manicureapp.fragments.ServiceInfoFragment"
+        android:label="ServiceInfoFragment"
+        tools:layout="@layout/service_info_fragment" />
+
+</navigation>

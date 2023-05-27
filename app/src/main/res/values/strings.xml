@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ManicureApp</string>
+    <string name="sign_in_to_account">Войти в аккаунт</string>
+    <string name="enter_phone_and_password">Введите номер телефона и пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="number">Номер</string>
+    <string name="password">Пароль</string>
+    <string name="registration">Регистрация</string>
+    <string name="full_name">ФИО</string>
+    <string name="email">Почта</string>
+    <string name="master_name">master_name</string>
+    <string name="skills">skills</string>
+    <string name="master_image">Master image</string>
+    <string name="first_start_key">first_start_key</string>
+    <string name="signing">Запись</string>
+    <string name="master">Мастер</string>
+    <string name="back">back</string>
+    <string name="date">Дата</string>
+    <string name="services">Услуги</string>
+    <string name="sum">Сумма: </string>
+    <string name="sign">Записаться</string>
+    <string name="time">Время</string>
+    <string name="home">Домашняя страница</string>
+    <string name="price_list">Прайс лист</string>
+    <string name="account">Аккаунт</string>
+    <string name="service">Услуга</string>
+    <string name="description">description</string>
+    <string name="price">price</string>
+    <string name="name">name</string>
+    <string name="order">order</string>
+</resources>
