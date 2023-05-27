@@ -21,7 +21,7 @@ class AccountFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?,
   ): View? {
-    (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    (activity as AppCompatActivity).supportActionBar!!.show()
 
     return inflater.inflate(R.layout.account_fragment, container, false)
   }

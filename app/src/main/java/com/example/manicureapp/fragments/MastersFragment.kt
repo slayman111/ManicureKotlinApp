@@ -23,7 +23,7 @@ class MastersFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?,
   ): View? {
-    (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    (activity as AppCompatActivity).supportActionBar!!.show()
 
     userUid = arguments?.getInt(AppConstants.USER_UID)!!
     return inflater.inflate(R.layout.masters_fragment, container, false)

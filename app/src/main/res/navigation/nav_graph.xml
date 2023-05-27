@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/mastersFragment"
         android:name="com.example.manicureapp.fragments.MastersFragment"
-        android:label="MastersFragment"
+        android:label="Мастер"
         tools:layout="@layout/masters_fragment">
         <action
             android:id="@+id/action_mastersFragment_to_signUpFragment"
@@ -43,19 +43,19 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.manicureapp.fragments.SignUpFragment"
-        android:label="SignUpFragment"
+        android:label="Запись"
         tools:layout="@layout/sign_up_fragment" />
 
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.manicureapp.fragments.AccountFragment"
-        android:label="AccountFragment"
+        android:label="Профиль"
         tools:layout="@layout/account_fragment" />
 
     <fragment
         android:id="@+id/priceListFragment"
         android:name="com.example.manicureapp.fragments.PriceListFragment"
-        android:label="PriceListFragment"
+        android:label="Прайс лист"
         tools:layout="@layout/price_list_fragment">
         <action
             android:id="@+id/action_priceListFragment_to_serviceInfoFragment"
@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/serviceInfoFragment"
         android:name="com.example.manicureapp.fragments.ServiceInfoFragment"
-        android:label="ServiceInfoFragment"
+        android:label=""
         tools:layout="@layout/service_info_fragment" />
 
 </navigation>

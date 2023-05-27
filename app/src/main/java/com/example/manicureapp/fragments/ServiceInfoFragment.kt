@@ -21,7 +21,7 @@ class ServiceInfoFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?,
   ): View? {
-    (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    (activity as AppCompatActivity).supportActionBar!!.show()
 
     return inflater.inflate(R.layout.service_info_fragment, container, false)
   }

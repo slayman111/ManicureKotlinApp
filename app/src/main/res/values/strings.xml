@@ -29,4 +29,7 @@
     <string name="price">price</string>
     <string name="name">name</string>
     <string name="order">order</string>
+    <string name="start">Начать</string>
+    <string name="for_manic">Это приложение для записи на маникюр</string>
+    <string name="welcome">Добро пожаловать!</string>
 </resources>

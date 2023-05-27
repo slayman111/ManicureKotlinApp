@@ -22,7 +22,7 @@ class RegistrationFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?,
   ): View? {
-    (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    (activity as AppCompatActivity).supportActionBar!!.hide()
 
     return inflater.inflate(R.layout.registration_fragment, container, false)
   }
