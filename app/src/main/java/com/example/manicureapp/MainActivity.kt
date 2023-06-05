@@ -112,6 +112,7 @@ class MainActivity : AppCompatActivity() {
       R.id.priceListFragment,
       R.id.serviceInfoFragment,
       R.id.signUpFragment,
+      R.id.homeFragment,
     ))
 
     setupActionBarWithNavController(navController, appBarConfiguration)

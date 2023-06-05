@@ -18,6 +18,10 @@ import com.example.manicureapp.db.entities.Master
 import com.example.manicureapp.db.entities.Order
 import com.example.manicureapp.db.entities.Service
 import kotlinx.android.synthetic.main.sign_up_fragment.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class SignUpFragment : Fragment() {
@@ -25,6 +29,7 @@ class SignUpFragment : Fragment() {
   private lateinit var db: AppDatabase
   private lateinit var services: List<Service>
   private lateinit var masters: List<Master>
+  private val calendar: Calendar = Calendar.getInstance()
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
@@ -48,6 +53,22 @@ class SignUpFragment : Fragment() {
       )
     mastersSpinner.adapter = mastersArrayAdapter
 
+    val datesArrayAdapter: ArrayAdapter<String> =
+      ArrayAdapter<String>(
+        requireActivity().applicationContext,
+        android.R.layout.simple_spinner_item,
+        getNextWeek()
+      )
+    dateSpinner.adapter = datesArrayAdapter
+
+    val timesArrayAdapter: ArrayAdapter<String> =
+      ArrayAdapter<String>(
+        requireActivity().applicationContext,
+        android.R.layout.simple_spinner_item,
+        getWorkTime()
+      )
+    timesSpinner.adapter = timesArrayAdapter
+
     services = db.serviceDao().getAll()
     val servicesArrayAdapter: ArrayAdapter<String> =
       ArrayAdapter<String>(
@@ -63,16 +84,12 @@ class SignUpFragment : Fragment() {
 
     buttonSign.setOnClickListener {
       try {
-        if (editTextDate.text.toString().isEmpty() || editTextTime.text.toString().isEmpty()) {
-          throw Exception("Заполните все поля")
-        }
-
         db.orderDao().insertAll(Order(
           masters[mastersSpinner.selectedItemPosition].uid,
           services[servicesSpinner.selectedItemPosition].uid,
           userUid!!,
-          editTextDate.text.toString(),
-          editTextTime.text.toString()
+          dateSpinner.selectedItem.toString(),
+          timesSpinner.selectedItem.toString()
         ))
 
         Toast.makeText(
@@ -98,5 +115,32 @@ class SignUpFragment : Fragment() {
     }
 
     super.onViewCreated(view, savedInstanceState)
+  }
+
+  private fun getNextWeek(): ArrayList<String> {
+    val format: DateFormat = SimpleDateFormat("MM.dd")
+    val days = ArrayList<String>()
+    for (i in 0..6) {
+      days.add(format.format(this.calendar.getTime()))
+      this.calendar.add(Calendar.DATE, 1)
+    }
+    return days
+  }
+
+  private fun getWorkTime(): ArrayList<String> {
+    val time = ArrayList<String>()
+
+    with(time) {
+      add("10:00")
+      add("11:00")
+      add("12:00")
+      add("13:00")
+      add("14:00")
+      add("15:00")
+      add("16:00")
+      add("17:00")
+    }
+
+    return time
   }
 }

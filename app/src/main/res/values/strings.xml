@@ -32,4 +32,6 @@
     <string name="start">Начать</string>
     <string name="for_manic">Это приложение для записи на маникюр</string>
     <string name="welcome">Добро пожаловать!</string>
+    <string name="email_example">Email: manicure_maykop@gmail.com</string>
+    <string name="phone_example">Телефон: +79284584831</string>
 </resources>

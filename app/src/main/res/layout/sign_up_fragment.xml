@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -74,45 +73,64 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_corners"
+        android:contentDescription="@string/back"
         android:padding="1dp"
         android:src="@drawable/ic_baseline_arrow_back_ios_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/back" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextDate"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/date"
-        android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/mastersSpinner"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/mastersSpinner"
         app:layout_constraintTop_toBottomOf="@+id/mastersSpinner" />
 
-    <EditText
+    <Spinner
+        android:id="@+id/dateSpinner"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <TextView
         android:id="@+id/editTextTime"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/time"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="@+id/mastersSpinner"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mastersSpinner"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintEnd_toEndOf="@+id/dateSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dateSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/dateSpinner" />
+
+    <Spinner
+        android:id="@+id/timesSpinner"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTime"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="@string/service"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+        app:layout_constraintStart_toStartOf="@+id/timesSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/timesSpinner" />
 
     <Spinner
         android:id="@+id/servicesSpinner"
@@ -129,9 +147,9 @@
         android:id="@+id/textViewSum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp"
+        android:layout_marginTop="30dp"
         android:text="@string/sum"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/servicesSpinner"
         app:layout_constraintTop_toBottomOf="@+id/servicesSpinner" />
 
